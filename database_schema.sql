@@ -22,6 +22,7 @@
 DROP TABLE IF EXISTS `ci_sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
+<<<<<<< HEAD
 CREATE TABLE IF NOT EXISTS  `ci_sessions` (
   session_id varchar(40) DEFAULT '0' NOT NULL,
   ip_address varchar(16) DEFAULT '0' NOT NULL,
@@ -31,6 +32,16 @@ CREATE TABLE IF NOT EXISTS  `ci_sessions` (
   PRIMARY KEY (session_id),
   KEY `last_activity_idx` (`last_activity`)
 ); ENGINE=InnoDB DEFAULT CHARSET=utf8;
+=======
+CREATE TABLE `ci_sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(16) NOT NULL DEFAULT '0',
+  `user_agent` varchar(50) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_data` text NOT NULL,
+  PRIMARY KEY (`session_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+>>>>>>> 793318eedce0e7791f6571232f1c6d52297f0150
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +58,11 @@ CREATE TABLE `modelo_opciones` (
   `opcion_texto` varchar(256) NOT NULL,
   PRIMARY KEY (`opcion_id`),
   UNIQUE KEY `opcion_hash_privado` (`opcion_hash_privado`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+>>>>>>> 793318eedce0e7791f6571232f1c6d52297f0150
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,7 +80,11 @@ CREATE TABLE `modelo_preguntas` (
   `pregunta_texto` varchar(1024) NOT NULL,
   PRIMARY KEY (`pregunta_id`),
   UNIQUE KEY `pregunta_hash_privado` (`pregunta_hash_privado`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+>>>>>>> 793318eedce0e7791f6571232f1c6d52297f0150
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,7 +104,11 @@ CREATE TABLE `modelo_votos` (
   `voto_texto` varchar(2048) NOT NULL,
   PRIMARY KEY (`voto_id`),
   UNIQUE KEY `voto_hash_privado` (`voto_hash_privado`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+>>>>>>> 793318eedce0e7791f6571232f1c6d52297f0150
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -104,7 +127,11 @@ CREATE TABLE `sufragios_registros` (
   `registro_mesa_id` varchar(5) NOT NULL,
   PRIMARY KEY (`registro_id`),
   KEY `voto_unico` (`registro_user_hash`,`registro_voto_id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+=======
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+>>>>>>> 793318eedce0e7791f6571232f1c6d52297f0150
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -123,7 +150,11 @@ CREATE TABLE `sufragios_votos` (
   `voto_datos_encriptados` text NOT NULL,
   PRIMARY KEY (`sufragio_hash`),
   KEY `voto_unico` (`sufragio_hash`,`voto_id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+=======
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+>>>>>>> 793318eedce0e7791f6571232f1c6d52297f0150
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

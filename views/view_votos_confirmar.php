@@ -1,0 +1,31 @@
+<?php include('view_overall_header.php'); ?>
+<a href="<?php echo site_url("/votos/ver/{$voto['voto_id']}"); ?>">Volver al voto <?php echo $voto['voto_id']; ?></a>
+<?php $this->load->helper('form'); ?>
+<h1 class="voto_title">Confirmar - <?php echo $voto['voto_id'] . ": " . htmlentities(utf8_decode($voto['voto_titulo'])); ?></h1>
+<table class="tabla" style="width: 240px; margin: 30px auto 30px;">
+<tr>
+    	<td style="width: 120px; font-weight: bold; padding: 10px;">Tipo de voto</td>
+        <td style="width: 120px; padding: 10px;"><?php echo $voto['tipo']; ?></td>
+</tr>
+</table>
+<?php echo form_open('/votos/emitir', '', $hidden); ?>
+
+<?php $counter = 0; ?>
+<?php foreach($voto['preguntas'] as $key => $row) { ?>
+<h3><?php echo ++$counter . ". " . htmlentities(utf8_decode($row['texto'])); ?></h3>
+<div style="text-align: left; font-size: 12px;">Puede seleccionar hasta <?php echo $row['limite']; ?> <?php echo ($row['limite'] > 1) ? 'opciones' : 'opcion'; ?>.</div>
+<div class="opciones">
+<?php foreach($voto['preguntas'][$key]['opciones'] as $key2 => $row2) { ?>
+	<div class="opcion">
+<?php if($row2['marcado']) { ?>
+		<input name="opciones[<?php echo $key2 ?>]" type="hidden" value="<?php echo $row2['valor'] ?>" />
+<?php } ?>
+		<input id="opcion_<?php echo $key2 ?>" type="checkbox" <?php if($row2['marcado']) echo "checked=\"checked\""?> disabled="disabled" />
+		<label for="opcion_<?php echo $key2 ?>"><?php echo $row2['texto']; ?></label>
+	</div>
+<?php } ?>
+</div>
+<?php } ?>
+<div style="margin-top: 10px;"><input type="submit" name="emitir" value="Confirmar" /></div>
+</form>
+<?php include('view_overall_footer.php'); ?>
