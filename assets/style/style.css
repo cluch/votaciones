@@ -1,0 +1,192 @@
+body {
+	background-color: #fff;
+	margin: 0;
+	font-family: Lucida Grande, Verdana, Sans-serif;
+	font-size: 13px;
+	color: #4F5155;
+	text-align: center;
+}
+
+a {
+	color: #002288;
+	background-color: transparent;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+h1 {
+	color: #444444;
+	background-color: transparent;
+	border-bottom: 1px solid #D0D0D0;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 20px 0 20px 0;
+	padding: 5px 0 6px 0;
+	text-align: left;
+}
+
+h3 {
+	margin: 25px 0 0 0;
+	text-align: left;
+}
+
+#menu-superior {
+	margin: 0;
+	height: 22px;
+	background-color: #00001F;
+	color: #DDDDDD;
+	font-size: 11px;
+	text-align: right;
+}
+
+#menu-superior a {
+	text-decoration: none;
+	color: #DDDDDD;
+}
+
+#menu-superior a:hover {
+        color: #FFFFFF;
+}                                                                                             
+
+#menu-superior-id {
+	margin: 0 40px 0 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: middle;
+	cursor: default;
+	line-height: 22px;
+	*display: inline;
+}
+
+#menu-superior-lista {
+	margin: 0 0 0 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline;
+}
+
+#menu-superior-lista li {
+	margin: 0 30px 0 0;
+	padding: 0;
+	display: inline-block;
+	list-style-type: none;
+	cursor: default;
+	line-height: 22px;
+	*display: inline;
+}
+
+#contenedor {
+	margin: 20px 120px 0px 120px;
+	text-align: center;
+}
+
+
+#mensajes_error {
+	border: 1px solid #FF0000;
+	background-color: #FFDDDD;
+	padding: 5px 20px;
+	width: 400px;
+	margin: 0 auto 20px;
+}
+
+#mensajes_error li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+#estadisticas {
+	width: 230px;
+	margin: 0 auto 10px;
+	margin-top: 20px;
+	font-size: 10px;
+	text-align: center;
+}
+
+
+.opciones {
+	font-family: Monaco, Verdana, Sans-serif;
+	font-size: 13px;
+	background-color: #f9f9f9;
+	border: 1px solid #D0D0D0;
+	color: #002166;
+	display: block;
+	margin: 15px 0 15px 0;
+	padding: 12px 10px 12px 10px;
+}
+
+.opciones:hover {
+        background-color: #F0F0F0;
+}
+
+.opcion {
+	margin: 5px 0px 5px 0px;
+	text-align: left;
+}
+
+
+.tabla, .tabla_lista {
+	font-size: 12px;
+	background-color: #F9F9F9;
+	border: 1px solid #D0D0D0;
+	border-collapse: collapse;
+}
+
+.tabla tr td, .tabla_lista tr, td {
+	cursor: default;
+	text-align: center;
+	border: 0;
+	height: 20px;
+}
+
+.tabla_lista tr:nth-child(n+2):hover {
+	background-color: #FFEAEA;
+}
+
+
+.llave {
+	font-family: Monaco, Verdana, Sans-serif;
+	font-size: 9px;
+	background-color: #f9f9f9;
+	border: 1px solid #D0D0D0;
+	color: #002166;
+	padding: 10px;
+	word-wrap: break-word;
+}
+
+#llave_privada {
+	display: inline-block;
+	width: 430px;
+	vertical-align: top;
+	margin-left: 50px;
+}
+
+#inicio {
+	width: 350px;
+	height: 100px;
+	margin: 20px auto;
+	text-align: center;
+	padding: 10px;
+	background-color: #F9F9F9;
+	border: 1px solid #D0D0D0;
+	cursor: pointer;
+}
+
+#inicio:hover {
+	 background-color: #E0E0E0;
+}
+
+
+#creditos {
+	width: 270px;
+	margin: 60px auto 0;
+	text-align: center;
+	font-size: 11px;
+}
+
+#creditos p {
+	margin: 0;
+	padding: 0;
+}
