@@ -28,7 +28,9 @@ echo ($row['limite'] > 1) ? "opciones." : "opcion.";
 <?php foreach($voto['preguntas'][$key]['opciones'] as $key2 => $row2) { ?>
 	<div class="opcion">
 <?php if($accion == 'emitir') { ?>
+<?php if($row2['marcado']) { ?>
 		<input name="opciones[<?php echo $key2 ?>]" type="hidden" value="<?php echo $row2['valor'] ?>" />
+<?php } ?>
 		<input id="opcion_<?php echo $key2 ?>" type="checkbox" <?php if($row2['marcado']) echo "checked=\"checked\""?> disabled="disabled" />
 <?php } else { ?>
 		<input id="opcion_<?php echo $key2 ?>" name="opciones[<?php echo $key2 ?>]" type="checkbox" value="<?php echo $row2['valor'] ?>" />
