@@ -31,4 +31,5 @@ session_start();
 $_POST['carreras'] = $carreras;
 $_SESSION = $_POST;
 
-exit( 'https://' . $_SERVER['SERVER_NAME'] . '/~cluch/votaciones/usuario/upasaporte/' . session_id() );
+#exit( 'https://' . $_SERVER['SERVER_NAME'] . '/~cluch/votaciones/usuario/upasaporte/' . session_id() );
+exit( "https://votaciones.cluch.cl/usuario/upasaporte/" . session_id() );

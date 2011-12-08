@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /~cluch/votaciones
+    RewriteBase /
 
     # Forzar HTTPS
     RewriteCond %{HTTPS} !=on
